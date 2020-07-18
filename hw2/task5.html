@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task#5</title>
+</head>
+<body>
+   <script>
+       'use strict';
+        /*
+        Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических
+        операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+        */
+        function sum(a,b) {
+            return a + b;
+        }
+        
+        function minus(a,b) {
+            return a - b;
+        }
+       
+        function div(a,b) {
+            return a / b;
+        }
+       
+        function multi(a,b) {
+            return a * b; 
+        }
+     
+        function mathOperation(arg1, arg2, operation){
+    			switch(operation){
+       				 case 'сумма':
+           				 return sum(arg1,arg2);
+       				 case 'разность':
+           				 return minus(arg1,arg2);
+        			 case 'деление':
+                         return div(arg1,arg2);
+       				 case 'умножение':
+           				 return multi(arg1,arg2);
+                     default:
+                         alert('Такой операции не существует.');
+   				}
+        }
+       
+   </script> 
+</body>
+</html>
