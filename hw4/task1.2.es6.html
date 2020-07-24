@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        class Post {
+            constructor (author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+            }
+            Edit(textNew) {
+            this.text = textNew;
+            }
+        }
+        const Post1 = new Post('Alex', 'lorem', '25 октября');
+        Post1.Edit('Hello world');
+        console.log(Post1);
+
+        class AttachedPost extends Post {
+            constructor(author,text, date, highlighted) {
+                super(author,text, date);
+                this.highlighted = false;
+            }
+            MakeTextHighlighted(boolean) {
+                this.highlighted = boolean;
+            }
+        }
+        const AttachedPost1 = new AttachedPost('John', 'Ipsum', '28 декабря', false);
+        AttachedPost1.MakeTextHighlighted(true);
+        AttachedPost1.Edit('dolor dev');
+        console.log(AttachedPost1);
+
+    </script>
+</body>
+</html>
