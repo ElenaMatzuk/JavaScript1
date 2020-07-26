@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*
+        1. Написать функцию, преобразующую число в объект. Передавая на вход
+        число в диапазоне [0, 999], мы должны получить на выходе объект, 
+        в котором в соответствующих свойствах описаны разряды числа:
+        - единицы (в свойстве units)
+        - десятки (в свойстве tens)
+        - сотни (в свойстве hundereds) 
+        */
+
+        let max = 999;
+        let answer = {
+          number: Math.round(Math.random() * max),
+          units: 0,
+          tens: 0,
+          hundreds: 0,
+        };
+
+        if (answer.number <= 9){
+            answer.units = answer.number;
+        } else if (answer.number <= 999){
+            answer.units = Math.floor(answer.number % 10);
+            answer.tens = Math.floor(answer.number / 10 % 10);
+            answer.hundreds = Math.floor(answer.number / 100 % 10);
+        } else {
+            answer.number = 0;
+            console.log('Вы ввели число за диапазоном 0 - 999');
+        }
+        console.log(answer);
+    </script>
+</body>
+</html>

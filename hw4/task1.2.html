@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /*
+        1.2 Сделайте в стиле es5, а затем в стиле es6 (по аналогии из урока),
+        а) конструктор Post, который принимает параметры author, text, date 
+        и сохраняет их как свойства объекта. Объекты типа Post должны иметь 
+        метод edit, который будет принимать текст и записывать его в свойство 
+        text объекта.
+        б) конструктор AttachedPost, который принимает параметры author, text, 
+        date. Проинициализируйте эти свойства с помощью конструктора Post, 
+        чтобы не дублировать код. Также в конструкторе AttachedPost должно 
+        создаваться свойство highlighted со значением false.
+        Унаследуйте в объектах типа AttachedPost методы из Post.
+        Объекты типа AttachedPost должны иметь метод makeTextHighlighted, 
+        который будет назначать свойству highlighted значение true.
+        */
+
+        //es 5
+        function Post (author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+        Post.prototype.Edit = function(textNew) {
+            this.text = textNew;
+        }
+
+        const Post1 = new Post('Alex', 'lorem', '25 октября');
+        Post1.Edit('Hello world');
+        console.log(Post1);
+
+        function AttachedPost(author,text, date, highlighted) {
+            Post.call(this, author,text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constuctor = AttachedPost;
+        AttachedPost.prototype.MakeTextHighlighted = function(boolean) {
+            this.highlighted = boolean;
+        }
+        
+        const AttachedPost1 = new AttachedPost('John', 'Ipsum', '28 декабря', false);
+        AttachedPost1.MakeTextHighlighted(true);
+        AttachedPost1.Edit('dolor dev');
+        console.log(AttachedPost1);
+
+    </script>
+    
+</body>
+</html>
