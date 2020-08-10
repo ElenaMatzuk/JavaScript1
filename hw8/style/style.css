@@ -1,0 +1,143 @@
+    @font-face {
+    font-family: Montserrat;
+    font-weight: 300;
+    src: url(../fonts/montserrat-light.ttf);
+  }
+  
+  @font-face {
+    font-family: Montserrat;
+    font-weight: 400;
+    src: url(../fonts/montserrat-regular.ttf);
+  }
+
+  @font-face {
+    font-family: Raleway;
+    font-weight: 400;
+    src: url(../fonts/raleway-regular.ttf);
+  }
+
+.title-shop {
+    color: azure;
+    text-transform: uppercase;
+    font-size: 27px;
+    display: block;
+    padding-right: 70px;
+    font-family: Montserrat;
+    font-weight: 300;
+}
+
+ .title-about {
+     display: block;
+     text-align: center;
+     margin-top: 50px;
+     color: #555555;
+     font-family: Montserrat;
+     font-weight: 400;
+ }
+
+.bucketPanel {
+    width: 400px;
+    padding: 10px;
+}
+
+.productRemoveBtn:hover {
+    cursor: pointer;
+}
+
+.title-product {
+    text-align: center;
+    background-color: antiquewhite;
+    display: block;
+    height: 100px;
+    padding: 30px;
+    margin: 50px;
+    font-family: Raleway;
+    font-weight: 400;
+}
+
+.name-product {
+    text-align: center;
+    display: block;
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+    font-family: Raleway;
+    font-weight: 400;
+}
+
+.section-features {
+    display: flex;
+    margin: 50px 80px 80px 80px;
+  }
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+    padding: 10px 10px 0 10px;
+  }
+  
+  .features:after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: whitesmoke;
+  }
+  
+  .features:hover .features-icon {
+    fill: green;
+  }
+  
+  .features:hover .features-title {
+    color: green;
+  }
+  
+  .features:hover:after {
+    background-color: green;
+  }
+  
+  .features-icon {
+    display: flex;
+    fill: #5f5f5f;
+    margin: 0 0 20px 0;
+  }
+
+  .features-title {
+    width: 100%;
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #555555;
+  }
+  
+  .features-txt {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #8c8c8c;
+  }
+
+  .footer {
+    width: 100%;
+    margin-top: 30px;
+    min-height: 80px;
+    background-color: #555555;
+    display: flex;
+  }
+
+  .footer-txt1 {
+      color: honeydew;
+      padding: 30px 300px 0 30px;
+  }
+
+  .footer-txt2 {
+      color: honeydew;
+      font-size: 20px;
+      padding: 30px 0 0 100px;
+  }
